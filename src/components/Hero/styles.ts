@@ -1,4 +1,6 @@
-.form {
+import styled from 'styled-components'
+
+export const Formulario = styled.form`
   height: 360px;
   width: 100%;
   background-image: url('https://cdn.pixabay.com/photo/2018/08/10/15/45/woman-3597101_1280.jpg');
@@ -6,9 +8,18 @@
   position: relative;
   display: flex;
   align-items: center;
-}
 
-.form::before {
+  div {
+    position: relative;
+    color: #eee;
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 24px 0;
+  }
+`
+export const PreFormulario = styled.form`
   position: absolute;
   top: 0;
   left: 0;
@@ -17,25 +28,17 @@
   background-color: var(--cor-principal);
   content: '';
   opacity: 0.7;
-}
-
-.form div {
+`
+export const DivForm = styled.div`
   position: relative;
   color: #eee;
-}
-
-.heroTitle {
+`
+export const TituloHero = styled.a`
   font-family: Gloock, serif;
   font-size: 48px;
-}
+  font-weight: bold;
 
-@media (max-width: 768px) {
-  .form {
-    height: auto;
-    padding: 24px 0;
-  }
-
-  .heroTitle {
+  @media (max-width: 768px) {
     font-size: 32px;
   }
-}
+`
